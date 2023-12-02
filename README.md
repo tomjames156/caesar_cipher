@@ -1,3 +1,3 @@
 # Caesar Cipher
 
-A Python program that converts a plain text to cipher text using the Caesar cipher
+This a python module that uses the Caesar cipher to encrpyt plain text and decrypt Caesar cipher text
