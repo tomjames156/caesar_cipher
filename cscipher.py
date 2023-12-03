@@ -3,7 +3,7 @@ letters = [
 ] # all english letters
 
 def encrypt(plain_text=''):
-    # encrypts plainn text to cipher text using the Caesar cipher
+    # encrypts plain text to cipher text using the Caesar cipher
     cipher_text = ''
     if plain_text == '': # if no text passed as a parameter 
         plain_text = input("Enter some plain text to be converted\n=> ") # user enters the plain text
@@ -23,3 +23,23 @@ def encrypt(plain_text=''):
 
 cipher = encrypt("Hey there i'm some plain text")
 print(f"\n{cipher}")
+
+def decrypt(cipher=''):
+    plain_text = ''
+    if cipher == '':
+        cipher = input("Enter the cipher text you want to decrypt\n=> ")
+    
+    for char in cipher:
+        if char.isalpha():
+            new_char = letters[(letters.index(char.upper()) - 3) % 26]
+            if char.isupper():
+                plain_text += new_char.upper()
+            else:
+                plain_text += new_char.lower()
+        else:
+            plain_text += char
+    
+    return(plain_text)
+
+plain = decrypt(cipher)
+print(f"\n{plain}")
