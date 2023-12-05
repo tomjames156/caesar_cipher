@@ -21,7 +21,7 @@ def encrypt(plain_text=''):
 
     return cipher_text
 
-cipher = encrypt("Hey there i'm some plain text")
+cipher = encrypt("How are you *Tinubu Voice")
 print(f"\n{cipher}")
 
 def decrypt(cipher=''):
